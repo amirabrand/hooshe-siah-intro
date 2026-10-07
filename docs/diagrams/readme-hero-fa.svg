@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320">
+  <!-- هوش سیاه — Persian README hero banner -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060609"/>
+      <stop offset="55%" stop-color="#0c0a16"/>
+      <stop offset="100%" stop-color="#060609"/>
+    </linearGradient>
+    <radialGradient id="corona" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="60%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rim" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#c4b5fd"/>
+    </linearGradient>
+    <linearGradient id="tg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ececf4"/>
+      <stop offset="100%" stop-color="#c4b5fd"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="320" rx="24" fill="url(#bg)"/>
+  <!-- subtle grid -->
+  <g stroke="#8b5cf6" stroke-opacity="0.07">
+    <path d="M 0 80 H1280 M 0 160 H1280 M 0 240 H1280"/>
+    <path d="M 160 0 V320 M 320 0 V320 M 480 0 V320 M 640 0 V320 M 800 0 V320 M 960 0 V320 M 1120 0 V320"/>
+  </g>
+
+  <!-- Eclipse mark (right side — RTL) -->
+  <g transform="translate(1128, 160)">
+    <circle r="128" fill="url(#corona)" opacity="0.55"/>
+    <circle r="92" fill="none" stroke="url(#rim)" stroke-width="8" filter="url(#glow)"/>
+    <circle r="78" fill="#050508"/>
+    <g stroke="#a78bfa" stroke-width="4.5" stroke-linecap="round">
+      <line x1="0" y1="-46" x2="0" y2="-24"/>
+      <line x1="-28" y1="18" x2="-14" y2="8"/>
+      <line x1="28" y1="18" x2="14" y2="8"/>
+      <line x1="0" y1="-24" x2="-14" y2="8"/>
+      <line x1="0" y1="-24" x2="14" y2="8"/>
+      <line x1="0" y1="14" x2="0" y2="44"/>
+    </g>
+    <g fill="#e9d5ff">
+      <circle cx="0" cy="-46" r="10"/>
+      <circle cx="0" cy="-24" r="13"/>
+      <circle cx="-28" cy="18" r="9"/>
+      <circle cx="28" cy="18" r="9"/>
+      <circle cx="0" cy="44" r="8"/>
+    </g>
+  </g>
+
+  <!-- Wordmark (RTL, right-aligned next to mark) -->
+  <text x="960" y="150" text-anchor="end" font-family="Vazirmatn, Tahoma, 'Segoe UI', sans-serif" font-size="92" font-weight="900" fill="url(#tg)">هوش سیاه</text>
+  <text x="960" y="205" text-anchor="end" font-family="Vazirmatn, Tahoma, sans-serif" font-size="30" font-weight="500" fill="#8b5cf6">دروازه هوش مصنوعی — یک نقطه پایانی برای همه ارائه‌دهندگان</text>
+
+  <!-- Stat chips -->
+  <g font-family="Vazirmatn, Tahoma, sans-serif">
+    <rect x="700" y="238" width="200" height="44" rx="22" fill="#0e0e16" stroke="#8b5cf6" stroke-opacity="0.35"/>
+    <text x="800" y="266" text-anchor="middle" font-size="20" fill="#c4b5fd">۳۵۸ ارائه‌دهنده</text>
+    <rect x="470" y="238" width="210" height="44" rx="22" fill="#0e0e16" stroke="#8b5cf6" stroke-opacity="0.35"/>
+    <text x="575" y="266" text-anchor="middle" font-size="20" fill="#c4b5fd">۱۵۰+ سطح رایگان</text>
+    <rect x="230" y="238" width="220" height="44" rx="22" fill="#0e0e16" stroke="#8b5cf6" stroke-opacity="0.35"/>
+    <text x="340" y="266" text-anchor="middle" font-size="20" fill="#c4b5fd">۱۹ استراتژی مسیریابی</text>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- هوش سیاه — Black Intelligence — Eclipse mark -->
+  <defs>
+    <radialGradient id="corona" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="55%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="void" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e0e16"/>
+      <stop offset="100%" stop-color="#060609"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#c4b5fd" stop-opacity="0.95"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark rounded-square tile -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#void)" stroke="#2a2a3d" stroke-width="2"/>
+
+  <!-- Corona ring (the light behind the black disc) -->
+  <circle cx="256" cy="248" r="150" fill="url(#corona)" opacity="0.85"/>
+  <circle cx="256" cy="248" r="112" fill="none" stroke="url(#rim)" stroke-width="10" filter="url(#glow)"/>
+
+  <!-- The black disc — «سیاه» -->
+  <circle cx="256" cy="248" r="96" fill="#050508"/>
+
+  <!-- Neural synapse inside the void — «هوش» -->
+  <g stroke="#a78bfa" stroke-width="5" stroke-linecap="round" opacity="0.95">
+    <line x1="256" y1="196" x2="256" y2="230"/>
+    <line x1="222" y1="272" x2="243" y2="256"/>
+    <line x1="290" y1="272" x2="269" y2="256"/>
+    <line x1="256" y1="230" x2="243" y2="256"/>
+    <line x1="256" y1="230" x2="269" y2="256"/>
+  </g>
+  <g fill="#e9d5ff">
+    <circle cx="256" cy="196" r="13"/>
+    <circle cx="256" cy="230" r="16"/>
+    <circle cx="222" cy="272" r="11"/>
+    <circle cx="290" cy="272" r="11"/>
+    <circle cx="256" cy="304" r="9"/>
+  </g>
+  <line x1="256" y1="262" x2="256" y2="304" stroke="#a78bfa" stroke-width="5" stroke-linecap="round" opacity="0.95"/>
+
+  <!-- Orbit spark -->
+  <circle cx="368" cy="152" r="14" fill="#c4b5fd" filter="url(#glow)"/>
+</svg>
